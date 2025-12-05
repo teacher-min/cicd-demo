@@ -17,7 +17,7 @@ spec:
       - name: cicd-container
         # [중요] 초기에는 이미지 태그를 latest로 두지만, 
         # CI가 돌면 이 부분이 자동으로 새로운 태그로 바뀌게 될 것입니다.
-        image: minkt78/cicd-demo:effb167
+        image: minkt78/cicd-demo:7856865
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
