@@ -10,7 +10,7 @@ public class HelloController {
 
   @GetMapping("/")
   public String hello() {
-    String message = "Version 1.0"; // 나중에 이걸 2.0으로 바꿔서 배포 테스트함
+    String message = "Version 2.0"; // 나중에 이걸 2.0으로 바꿔서 배포 테스트함
     String podName = "Unknown";
     
     try {
