@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-deploy
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cicd-app
+  template:
+    metadata:
+      labels:
+        app: cicd-app
+    spec:
+      containers:
+      - name: cicd-container
+        # [중요] 초기에는 이미지 태그를 latest로 두지만, 
+        # CI가 돌면 이 부분이 자동으로 새로운 태그로 바뀌게 될 것입니다.
+        image: minkt78/cicd-demo:latest 
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
